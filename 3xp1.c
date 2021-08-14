@@ -6,7 +6,7 @@ int main(void) {
 	n = 0;
 	while (n < num) {
 		n++;
-		int nums[1000000], temp, i;
+		int nums[1000], temp, i;
 		i = n+0;
 		temp = 0;
 		while (i!=1) {
@@ -16,12 +16,15 @@ int main(void) {
 			else if (i%2==1) {
 				i = (3*i)+1;
 			}
-			nums[temp] = i;
+			nums[temp] = i+0;
 			temp++;
 		}
-		printf("%i: %i\n",n,temp);
-		for (int x=temp+0-3;x>temp;x++) {
-			printf("%i",nums[x]);
+	        printf("%i: %i\n",n,temp);
+		printf("[");
+		for (int x=0;x<temp;x++) {
+			printf("%d, ",nums[x]);
 		}
+		printf("\b\b]\n\n");
 	}
 }
+
