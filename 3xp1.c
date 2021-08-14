@@ -2,7 +2,8 @@
 
 int main(void) {
 	int num, n;
-	scanf("Enter a number: \n%i", &num);
+	printf("Enter a number: \n");
+	scanf("%i", &num);
 	n = 0;
 	while (n < num) {
 		n++;
