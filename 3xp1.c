@@ -2,7 +2,7 @@
 
 int main(void) {
 	int num, n;
-	scanf("Enter a number: \n", %num);
+	scanf("Enter a number: \n", &num);
 	n = 0;
 	while (n < num) {
 		n++;
