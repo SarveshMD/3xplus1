@@ -2,11 +2,11 @@
 
 int main(void) {
 	int num, n;
-	num = 150;
+	scanf("Enter a number: \n", %num);
 	n = 0;
 	while (n < num) {
 		n++;
-		int nums[1000], temp, i;
+		int nums[100000], temp, i;
 		i = n+0;
 		temp = 0;
 		while (i!=1) {
@@ -21,8 +21,14 @@ int main(void) {
 		}
 	        printf("%i: %i\n",n,temp);
 		printf("[");
+		int reached = 0;
 		for (int x=0;x<temp;x++) {
-			printf("%d, ",nums[x]);
+			if (nums[x] == 4) {
+				reached = 1;
+			}
+			if (reached) {
+				printf("%d, ",nums[x]);
+			}
 		}
 		printf("\b\b]\n\n");
 	}

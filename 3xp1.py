@@ -1,6 +1,6 @@
 import timeit
 
-num = 150
+num = input("Enter a Number: \n")
 def solve():
     n = 0
     global num
