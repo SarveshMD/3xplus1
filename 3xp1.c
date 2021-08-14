@@ -7,9 +7,10 @@ int main(void) {
 	n = 0;
 	while (n < num) {
 		n++;
-		int nums[100000], temp, i;
+		int nums[1000000], temp, i;
 		i = n+0;
 		temp = 0;
+		int run = 1;
 		while (i!=1) {
 			if (i%2==0) {
 				i/=2;
@@ -17,8 +18,18 @@ int main(void) {
 			else if (i%2==1) {
 				i = (3*i)+1;
 			}
+			/*printf("Temp: %i\n", temp);*/
 			nums[temp] = i+0;
 			temp++;
+			if (temp >= 1000000) {
+				run = 0;
+				printf("Temp greaterthan or equalto 100000"); 
+				break;
+			}
+		}
+		if (!run) {
+			printf("Run is 0");
+			break;
 		}
 	        printf("%i: %i\n",n,temp);
 		printf("[");
