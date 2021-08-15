@@ -1,23 +1,24 @@
 #include <stdio.h>
 
 int main(void) {
-int i, temp;
-i = 113383;
+double i;
+int temp;
+i = 113383.0;
 temp = 1;
 printf("{");
-while (i!=1) {
-	if (i%2==0) {
-		i=i/2;
+while (i!=1.0) {
+	if (i%2.0==0) {
+		i=i/2.0;
 	}
-	else if (i%2==1) {
-		i = (3*i)+1;
+	else if (i%2.0==1.0) {
+		i = (3.0*i)+1.0;
 	}
-	printf("\"%i\": %i, ",temp,i);
+	printf("\"%d\": %lf, ",temp,i);
 	temp++;
-	if (temp > 1000) {
+	/*if (temp > 1000) {
 		printf("temp > 1000\n");
 		break;
-	}
+	}*/
 }
 printf("}\n");
 }
