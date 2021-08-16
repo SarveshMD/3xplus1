@@ -16,7 +16,7 @@ def solve():
                 i = (3*i)+1
             temp += 1
             nums.append(i)
-        print("Temp: ", temp)
+        # print("Temp: ", temp)
         print(f"{n}: {len(nums)}\n{nums[-3:]}\n")
 
 print(timeit.timeit(solve,number=1))

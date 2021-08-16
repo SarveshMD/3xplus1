@@ -1,45 +1,37 @@
 #include <stdio.h>
+#include <math.h>
 
 int main(void) {
-	int num, n;
-	printf("Enter a number: \n");
-	scanf("%i", &num);
+	long int num, n;
+	// printf("Enter a number: \n");
+	// scanf("%i", &num);
+	num = 10000000;
 	n = 0;
 	while (n < num) {
 		n++;
-		int nums[1000000], temp, i;
-		i = n+0;
-		temp = 0;
-		int run = 1;
-		while (i!=1) {
-			if (i%2==0) {
-				i/=2;
+		int temp;
+		long double nums[100000], i;
+		i = n+0.0;
+		temp = 0.0;
+		while (i!=1.0) {
+			if (fmod(i,2.0)==0.0) {
+				i= i/2.0;
 			}
-			else if (i%2==1) {
-				i = (3*i)+1;
+			else if (fmod(i,2.0)==1.0) {
+				i = (3.0*i)+1.0;
 			}
-			/*printf("Temp: %i\n", temp);*/
-			nums[temp] = i+0;
+			nums[temp] = i+0.0;
 			temp++;
-			if (temp >= 1000000) {
-				run = 0;
-				printf("Temp greaterthan or equalto 100000"); 
-				break;
-			}
 		}
-		if (!run) {
-			printf("Run is 0");
-			break;
-		}
-	        printf("%i: %i\n",n,temp);
+		printf("%.0ld: %i\n",n,temp);
 		printf("[");
 		int reached = 0;
 		for (int x=0;x<temp;x++) {
-			if (nums[x] == 4) {
+			if (nums[x] == 4.0 || nums[x] == 2.0 || nums[x] == 1.0) {
 				reached = 1;
 			}
 			if (reached) {
-				printf("%d, ",nums[x]);
+				printf("%.0Lf, ",nums[x]);
 			}
 		}
 		printf("\b\b]\n\n");
