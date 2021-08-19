@@ -2,7 +2,7 @@
 
 int main(void) {
 	long int num, n;
-	num = 1000000;
+	num = 100000000;
 	n = 0;
 	while (n < num) {
 		n++;
