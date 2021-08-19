@@ -5,12 +5,12 @@ int main(void) {
 	long int num, n;
 	// printf("Enter a number: \n");
 	// scanf("%i", &num);
-	num = 10000000;
+	num = 10;
 	n = 0;
 	while (n < num) {
 		n++;
 		int temp;
-		long double nums[100000], i;
+		long int nums[1000000], i;
 		i = n+0.0;
 		temp = 0.0;
 		while (i!=1.0) {
@@ -31,7 +31,7 @@ int main(void) {
 				reached = 1;
 			}
 			if (reached) {
-				printf("%.0Lf, ",nums[x]);
+				printf("%.0ld, ",nums[x]);
 			}
 		}
 		printf("\b\b]\n\n");
