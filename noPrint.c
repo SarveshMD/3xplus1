@@ -2,16 +2,16 @@
 
 int main(void) {
 	long int num, n;
-	num = 10;
-	long int arr[num+0][100];
+	num = 100;
+	long int arr[num+0][10000];
 	n = 0;
+	printf("Crunching the numbers...\n");
 	while (n < num) {
 		n++;
 		long int i, temp;
 		i = n+0;
 		temp = 0;
 		arr[n-1][temp+1] = i+0;
-		// printf("\n\nn: %ld\n", n);
 		while (i!=1) {
 			if (i%2==0) {
 				i= i/2;
@@ -20,31 +20,24 @@ int main(void) {
 				i = (3*i)+1;
 			}
 			temp++;
-			//printf("i: %ld\n", i);
 			arr[n-1][temp+1] = i+0;
 		}
 		arr[n-1][0] = temp+1;
 	}
-	printf("Program exited successfully....\n");
-	/*for(int l1 = 0;l1<num;l1++) {
-		//printf("l1: %d\n", l1);
-		printf("\narr[%d][0] = %ld\n", l1, arr[l1][0]);
-		for(int l2 = 0; l2<arr[l1][0]; l2++) {
-			//printf("l2: %d\n", l2);
-			printf("arr[%d][%d] = %ld\n", l1, l2+1, arr[l1][l2+1]);
-		}
-	}*/
+	printf("Calculation Completed Successfully...\n");
 	for(int l1 = 0;l1<num;l1++) {
-		printf("%ld: %ld\n", arr[l1][1], arr[l1][0]);
-		int ready = 0; 
-		for(int l2 = 0; l2<arr[l1][0]; l2++) {
-			if ((!ready) && (arr[l1][l2+1]<=4) && (arr[l1][l2+1] != 3)) {
-				ready = 1;
-			}
-			if (ready) {
-				printf("arr[%d][%d] = %ld\n", l1, l2+1, arr[l1][l2+1]);
-			}
+		printf("\n%ld: %ld\n[", arr[l1][1], arr[l1][0]);
+		int startFrom;
+		if(arr[l1][0]>=3) {
+			startFrom = arr[l1][0]-3;
 		}
+		else {
+			startFrom = 0;
+		}
+		for(int l2 = startFrom; l2<arr[l1][0]; l2++) {
+			printf("%ld, ", arr[l1][l2+1]);
+		}
+		printf("\b\b]\n");
 	}
 }
 
