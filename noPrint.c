@@ -2,7 +2,8 @@
 
 int main(void) {
 	long int num, n;
-	num = 100;
+	printf("Enter a number: \n");
+	scanf("%ld", &num);
 	long int arr[num+0][10000];
 	n = 0;
 	printf("Crunching the numbers...\n");
@@ -27,14 +28,14 @@ int main(void) {
 	printf("Calculation Completed Successfully...\n");
 	for(int l1 = 0;l1<num;l1++) {
 		printf("\n%ld: %ld\n[", arr[l1][1], arr[l1][0]);
-		int startFrom;
+		int l2;
 		if(arr[l1][0]>=3) {
-			startFrom = arr[l1][0]-3;
+			l2 = arr[l1][0]-3;
 		}
 		else {
-			startFrom = 0;
+			l2 = 0;
 		}
-		for(int l2 = startFrom; l2<arr[l1][0]; l2++) {
+		for(; l2<arr[l1][0]; l2++) {
 			printf("%ld, ", arr[l1][l2+1]);
 		}
 		printf("\b\b]\n");
