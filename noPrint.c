@@ -4,7 +4,7 @@ int main(void) {
 	long int num, n;
 	printf("Enter a number: \n");
 	scanf("%ld", &num);
-	long int arr[num+0][10000];
+long int arr[num+0][10000]; // This line needs a lot of memory, so blows up.
 	n = 0;
 	printf("Crunching the numbers...\n");
 	while (n < num) {
