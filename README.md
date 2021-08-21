@@ -2,7 +2,7 @@
 
 [Source - Veritasium YouTube Video](https://youtu.be/094y1Z2wpJg)
 
-## Steps to replicate: 
+## Steps to replicate the problem 
 1) Take any positive integer
 2) Conditional: 
    - Divide it by 2 if it is an even number.
